@@ -40,4 +40,39 @@ public class Rotate_K_Elements {
             }
         }
     }
+
+    public static void rotateArray () {
+        int array[] = {1,2,3,4,5};
+        int d = 2;
+        int temp[] = new int[d];
+
+        for(int i=0;i<d;i++) {
+            temp[i] = array[i];
+        }
+
+        System.out.println("Printing temp");
+        for(int i=0; i<temp.length;i++) {
+            System.out.println(temp[i]);
+        }
+
+        for (int i=0;i<array.length-d;i++) {
+            array[i] = array[i+d];
+        }
+
+        System.out.println("Printing replaced array");
+        for (int i=0;i<array.length;i++) {
+            System.out.println(array[i]);
+        }
+
+        int arrayLength = array.length-1;
+        for(int i=temp.length-1; i>=0;i--) {
+            array[arrayLength] = temp[i];
+            arrayLength--;
+        }
+
+        System.out.println("Printing final array");
+        for (int i=0;i<array.length;i++) {
+            System.out.println(array[i]);
+        }
+    }
 }
