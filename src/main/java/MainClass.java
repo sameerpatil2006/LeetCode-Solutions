@@ -1,18 +1,15 @@
-import Trees.BinaryTree;
-import Trees.BottomViewTree;
-import Trees.InsertTree;
-import Trees.TopViewTree;
+import LinkedList.*;
+import RandomSolutions.*;
 
 public class MainClass {
     public static void main(String args[]){
-        BinaryTree root = null;
-        int[] keys = { 1,2,3,4,5,6};
 
-        for (int key : keys) {
-            root = InsertTree.insert(root, key);
-        }
+        InsertFirst.insertFirst(1);
+        InsertFirst.insertFirst(2);
+        InsertFirst.insertFirst(3);
 
-        TopViewTree.TopView(root);
-        BottomViewTree.bottomView(root);
+        int[] nums = {4,9,5};
+        int[] nums2 = {9,4,9,8,4};
+        System.out.println(CountPrimes.countPrimes(10));
     }
 }
