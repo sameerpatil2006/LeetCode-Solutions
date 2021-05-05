@@ -40,5 +40,35 @@ public class Add2Numbers {
        }
        return num;
     }
-
 }
+
+/*
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode first = l1;
+        ListNode second = l2;
+        ListNode dummyHead = new ListNode();
+        ListNode current = dummyHead;
+        int sum =0, carry =0;
+        while (first != null || second != null ){
+            sum = carry;
+            if (first != null){
+                sum = sum + first.val;
+                first = first .next;
+            }
+            if (second != null){
+                sum = sum + second.val;
+                second = second.next;
+            }
+
+            carry = sum / 10;
+
+            current.next = new ListNode(sum%10);
+
+            current = current.next;
+        }
+        if (carry !=0){
+            current.next = new ListNode(carry);
+        }
+
+        return dummyHead.next;
+    }*/
